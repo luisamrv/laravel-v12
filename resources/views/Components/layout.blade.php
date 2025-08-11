@@ -19,9 +19,15 @@
             </style>
         @endif
     </head>
-    <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#ffffff] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
+    <body class="bg-[#FDFDFC] flex p-6 lg:p-8 min-h-screen flex-col">
         
-        <h1>Hello World!</h1>
+        <nav>
+          <x-nav-link href="/">Home</x-nav-link>
+          <x-nav-link href="/about" style="color:green;">About</x-nav-link>
+          <x-nav-link href="/contact">Contact</x-nav-link>
+        </nav>
+
+        {{ $slot }}
 
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
